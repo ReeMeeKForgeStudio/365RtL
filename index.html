@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7f8">
+  <title>365 Reasons Why I Love You ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">A little gift, for every day</div>
+      <h1>365 Reasons<br><span>Why I Love You</span></h1>
+      <p class="intro">One little scratch every day.<br>One more reason to smile.</p>
+
+      <div class="today-card">
+        <div class="today-label">TODAY</div>
+        <div class="day-number" id="todayNumber">01</div>
+        <div class="today-date" id="todayDate">Your first day</div>
+      </div>
+
+      <button class="primary" id="openToday">Open today's scratch card ♥</button>
+      <p class="hint" id="lockHint"></p>
+    </section>
+
+    <section class="memories" id="memories">
+      <div class="section-kicker">Little pieces of us</div>
+      <h2>Our memories</h2>
+      <p class="section-text">Some days are more than a reason. They're a memory I never want to forget.</p>
+      <div class="memory-grid" id="memoryGrid"></div>
+    </section>
+
+    <section class="all-days" id="days">
+      <div class="section-kicker">365 little reasons</div>
+      <h2>Every single day</h2>
+      <div class="progress-wrap">
+        <div class="progress-info"><span id="progressText">Day 1 of 365</span><span id="progressPercent">0%</span></div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+      <div class="day-grid" id="dayGrid"></div>
+    </section>
+
+    <footer>
+      <div>Made with love, one day at a time.</div>
+      <div class="footer-heart">♥</div>
+    </footer>
+  </main>
+
+  <div class="modal hidden" id="modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="closeBackdrop"></div>
+    <div class="modal-card">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-kicker" id="modalKicker">DAY 1</div>
+      <h2 id="modalTitle">Scratch me</h2>
+      <div class="scratch-area" id="scratchArea">
+        <canvas id="scratchCanvas"></canvas>
+        <div class="revealed" id="revealedText"></div>
+      </div>
+      <p class="scratch-instruction" id="scratchInstruction">Scratch with your finger to reveal your reason ♥</p>
+      <div class="memory-note hidden" id="memoryNote"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
